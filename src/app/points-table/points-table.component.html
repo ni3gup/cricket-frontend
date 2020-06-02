@@ -1,0 +1,33 @@
+<section id="posts">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mt-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Points Table</h4>
+                    </div>
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Team</th>
+                                <th>Matches Played</th>
+                                <th>Won</th>
+                                <th>Lost</th>
+                                <th>Points</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let points of pointsTable">
+                                <td>{{ points.team }}</td>
+                                <td>{{ points.total_matches }}</td>
+                                <td>{{ points.total_points / 2 }}</td>
+                                <td>{{ points.total_matches - points.total_points / 2 }}</td>
+                                <td>{{ points.total_points }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

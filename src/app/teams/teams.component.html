@@ -1,0 +1,33 @@
+<section id="posts">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mt-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Teams</h4>
+                    </div>
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Team Name</th>
+                                <th>Country</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let team of teams">
+                                <td>{{ team.team }}</td>
+                                <td>{{ team.country }}</td>
+                                <td>
+                                    <a href="teams/{{ team.id }}/players" class="btn btn-secondary">
+                                      <i class="fas fa-angle-double-right"></i> Player Details
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

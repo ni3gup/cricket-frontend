@@ -1,0 +1,36 @@
+<section id="posts">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mt-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>players</h4>
+                    </div>
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Player</th>
+                                <th>Country</th>
+                                <th>Statistics</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let player of players">
+                                <td>{{ player.name }}</td>
+                                <td>{{ player.team }}</td>
+                                <td>{{ player.country }}</td>
+                                <td>
+                                    <a href="player/{{ player.id }}" class="btn btn-secondary">
+                                      <i class="fas fa-angle-double-right"></i> Details
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr *ngIf="players && players.length === 0">No Players Found</tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
